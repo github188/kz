@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script src="../../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+<script src="../../../libs/thirdparty/highcharts/js/highcharts-more.js"></script>
+<script>
+	$(function () {
+        $('#container').highcharts({
+        chart: {
+            type: 'waterfall'
+        },
+
+        title: {
+            text: '主标题'
+        },
+
+        xAxis: {
+            type: 'category'
+        },
+
+        yAxis: {
+            title: {
+                text: '值'
+            }
+        },
+
+        legend: {
+            enabled: false
+        },
+
+       
+
+        series: [{
+            upColor: Highcharts.getOptions().colors[2],
+            color: Highcharts.getOptions().colors[3],
+            data: [{
+                name: '列1',
+                y: 120000
+            }, {
+                name: '列2',
+                y: 569000
+            }, {
+                name: '列3',
+                y: 231000
+            }, {
+                name: '列4',
+                isIntermediateSum: true,
+                color: Highcharts.getOptions().colors[1]
+            }, {
+                name: '列5',
+                y: -342000
+            }, {
+                name: '列6',
+                y: -233000
+            }, {
+                name: '列7',
+                isSum: true,
+                color: Highcharts.getOptions().colors[1]
+            }],
+            dataLabels: {
+                enabled: true,
+                formatter: function () {
+                    return Highcharts.numberFormat(this.y / 1000, 0, ',') + 'k';
+                },
+                style: {
+                    color: '#FFFFFF',
+                    fontWeight: 'bold',
+                    textShadow: '0px 0px 3px black'
+                }
+            },
+            pointPadding: 0
+        }]
+    });
+});
+</script>
+</head>
+<body>
+
+		<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+ 
+</body>
+</html>

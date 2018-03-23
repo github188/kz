@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script src="../../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+<script>
+$(function () {
+$('#container').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: '月平均天气'
+            },
+            subtitle: {
+				text: document.ontouchstart === undefined ?
+                    '框选放大' :
+                    '手势放大'
+            },
+            xAxis: [{
+                categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    formatter: function() {
+                        return this.value +'°C';
+                    },
+                    style: {
+                        color: '#89A54E'
+                    }
+                },
+                title: {
+                    text: '气温',
+                    style: {
+                        color: '#89A54E'
+                    }
+                },
+                opposite: true
+    
+            }, { // Secondary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: '降雨量',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +' mm';
+                    },
+                    style: {
+                        color: '#4572A7'
+                    }
+                }
+    
+            }, { // Tertiary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: '气压',
+                    style: {
+                        color: '#ff9c00'
+                    }
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +' mb';
+                    },
+                    style: {
+                        color: '#ff9c00'
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 120,
+                verticalAlign: 'top',
+                y: 80,
+                floating: true,
+                backgroundColor: '#FFFFFF'
+            },
+            series: [{
+                name: '降雨量',
+                type: 'column',
+                yAxis: 1,
+                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                tooltip: {
+                    valueSuffix: ' mm'
+                }
+    
+            }, {
+                name: '气压',
+                type: 'spline',
+                yAxis: 2,
+                data: [1016, 1016, 1015.9, 1015.5, 1012.3, 1009.5, 1009.6, 1010.2, 1013.1, 1016.9, 1018.2, 1016.7],
+                marker: {
+                    enabled: false
+                },
+                dashStyle: 'shortdot',
+                tooltip: {
+                    valueSuffix: ' mb'
+                }
+    
+            }, {
+                name: '气温',
+                type: 'spline',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                tooltip: {
+                    valueSuffix: ' °C'
+                }
+            }]
+        });
+    });
+    
+</script>
+</head>
+<body>
+
+		<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+ 
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script src="../../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+<script src="../../../libs/thirdparty/highcharts/js/highcharts-more.js"></script>
+<script>
+$(function () {
+
+	var ranges = [
+			[1246406400000, 14.3, 27.7],
+			[1246492800000, 14.5, 27.8],
+			[1246579200000, 15.5, 29.6],
+			[1246665600000, 16.7, 30.7],
+			[1246752000000, 16.5, 25.0],
+			[1246838400000, 17.8, 25.7],
+			[1246924800000, 13.5, 24.8],
+			[1247011200000, 10.5, 21.4],
+			[1247097600000, 9.2, 23.8],
+			[1247184000000, 11.6, 21.8],
+			[1247270400000, 10.7, 23.7],
+			[1247356800000, 11.0, 23.3],
+			[1247443200000, 11.6, 23.7],
+			[1247529600000, 11.8, 20.7],
+			[1247616000000, 12.6, 22.4],
+			[1247702400000, 13.6, 19.6],
+			[1247788800000, 11.4, 22.6],
+			[1247875200000, 13.2, 25.0],
+			[1247961600000, 14.2, 21.6],
+			[1248048000000, 13.1, 17.1],
+			[1248134400000, 12.2, 15.5],
+			[1248220800000, 12.0, 20.8],
+			[1248307200000, 12.0, 17.1],
+			[1248393600000, 12.7, 18.3],
+			[1248480000000, 12.4, 19.4],
+			[1248566400000, 12.6, 19.9],
+			[1248652800000, 11.9, 20.2],
+			[1248739200000, 11.0, 19.3],
+			[1248825600000, 10.8, 17.8],
+			[1248912000000, 11.8, 18.5],
+			[1248998400000, 10.8, 16.1]
+		];
+
+    
+    	$('#container').highcharts({
+    	
+		    chart: {
+		        type: 'arearange',
+		        zoomType: 'x'
+		    },
+		    
+		    title: {
+		        text: '每日气温'
+		    },
+			
+			subtitle: {
+				text: document.ontouchstart === undefined ?
+                    '框选放大' :
+                    '手势放大'
+            },
+		
+		    xAxis: {
+		        type: 'datetime'
+		    },
+		    
+		    yAxis: {
+		        title: {
+		            text: null
+		        }
+		    },
+		
+		    tooltip: {
+		        crosshairs: true,
+		        shared: true,
+		        valueSuffix: '°C'
+		    },
+		    
+		    legend: {
+		        enabled: false
+		    },
+		
+		    series: [{
+		        name: '温度',
+		        data: ranges
+		    }]
+		
+		});
+    
+});
+    
+</script>
+</head>
+<body>
+
+		<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+ 
+</body>
+</html>

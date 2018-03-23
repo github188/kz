@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript" src="libs/js/jquery.js"></script>
+	<script type="text/javascript" src="libs/js/language/cn.js"></script>
+	<script type="text/javascript" src="libs/js/framework.js"></script>
+	<link href="libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+	<!-- <link href="/libs/skins/blue/style.css" rel="stylesheet" type="text/css" id="theme" themeColor="blue"/> -->
+	<link rel="stylesheet" type="text/css" id="skin" prePath="../page-decoration/"/>
+	<link rel="stylesheet" type="text/css" id="customSkin"/>
+    <link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="css/decoration.css">
+    <script type="text/javascript" src="libs/js/form/color.js"></script>
+</head>
+<body>
+<section class="decoration-box">
+    <!--左侧手机栏开始-->
+    <div class="phone-show">
+        <header class="header">
+            <div class="back">返回</div>
+            <h2 class="title">我的店铺</h2>
+            <div class="share">· · ·</div>
+        </header>
+        <section class="con">
+            <!--图片广告-->
+            <div class="banner-box phone-box" data-type="banner-tool-box"></div>
+            <!-- 文本 -->
+            <div class="text-box phone-box" data-type = "text-tool-box">
+                <p class="text-word"
+                    f-weight = '0'
+                    f-color = '#000'
+                    f-bgc = '#fff'
+                    f-align = '0'
+                ></p>
+            </div>
+            <div class="text-box phone-box" data-type = "text-tool-box">
+                <p class="text-word"
+                    f-weight = '0'
+                    f-color = '#000'
+                    f-bgc = '#fff'
+                    f-align = '0'
+                ></p>
+            </div>
+            <!-- 魔方 -->
+            <div class="magic-cube-box phone-box" data-type = "magic-cube-tool-box"></div>
+            <!-- 标题 -->
+            <div class="title-box phone-box" 
+                data-type = "title-tool-box"
+                b-color = '#fff'
+                f-align = '0'
+                mode-type = '0'
+                normal-nav = '0' >
+                <div class="main-box">
+                    <span class="main-title"></span>
+                    <i class="dis-none">-</i>
+                    <span class="second-nav"></span>
+                </div>
+                <div class="second-box clearfloat">
+                    <span class="second-title"></span>
+                    <span class="second-date"></span>
+                    <span class="second-who"></span>
+                    <span class="second-url"></span>
+                </div>
+            </div>
+            <div class="title-box phone-box" 
+                data-type = "title-tool-box"
+                b-color = '#fff'
+                f-align = '0'
+                mode-type = '0'
+                normal-nav = '0' >
+                <div class="main-box">
+                    <span class="main-title"></span>
+                    <i class="dis-none">-</i>
+                    <span class="second-nav"></span>
+                </div>
+                <div class="second-box clearfloat">
+                    <span class="second-title"></span>
+                    <span class="second-date"></span>
+                    <span class="second-who"></span>
+                    <span class="second-url"></span>
+                </div>
+            </div>
+        </section>
+        <footer class="foot">
+            <dl class="base btn-group">
+                <dt class="base btn-title">基础组件</dt>
+                <dd>
+                    <ul class="base btn-con">
+                        <li class="base btn-list"
+                            data-type='富文本'
+                        >富文本</li>
+                        <li class="base btn-list"
+                            data-type='商品'
+                        >商品</li>
+                        <li class="base btn-list"
+                            data-type='商品分组'
+                        >商品分组</li>
+                        <li class="base btn-list"
+                            data-type='banner-tool-box'
+                        >图片广告</li>
+                        <li class="base btn-list"
+                            data-type='魔方'
+                        >魔方</li>
+                        <li class="base btn-list"
+                            data-type='图文导航'
+                        >图文导航</li>
+                        <li class="base btn-list"
+                        data-type='text-tool-box'
+                        >文本</li>
+                        <li class="base btn-list"
+                            data-type='关联链接'
+                        >关联链接</li>
+                        <li class="base btn-list"
+                            data-type='标题'
+                        >标题</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="base btn-group">
+                <dt class="base btn-title">营销组件</dt>
+                <dd>
+                    <ul class="base btn-con">
+                        <li class="base btn-list">优惠券</li>
+                        <li class="base btn-list">拼团</li>
+                        <li class="base btn-list">周期购</li>
+                        <li class="base btn-list">买单</li>
+                        <li class="base btn-list">限时折扣</li>
+                        <li class="base btn-list">秒杀</li>
+                        <li class="base btn-list disabled">知识专栏</li>
+                        <li class="base btn-list disabled">知识内容</li>
+                    </ul>
+                    <!--class  no-disabled 代表这个功能还没上线-->
+                </dd>
+            </dl>
+            <dl class="base btn-group">
+                <dt class="base btn-title">其他</dt>
+                <dd>
+                    <ul class="base btn-con">
+                        <li class="base btn-list">店铺信息</li>
+                        <li class="base btn-list">进入店铺</li>
+                        <li class="base btn-list">商品搜索</li>
+                        <li class="base btn-list">公告</li>
+                        <li class="base btn-list">语音</li>
+                        <li class="base btn-list">线下门店</li>
+                        <li class="base btn-list">在线客服</li>
+                        <li class="base btn-list">辅助线</li>
+                        <li class="base btn-list">辅助空白</li>
+                        <li class="base btn-list">自定义模块</li>
+                    </ul>
+                </dd>
+            </dl>
+        </footer>
+    
+    <!--左侧手机栏结束-->
+    <!-- 更改header的工具栏 -->
+    <ul class="header-tool-box tool-box dis-none">
+        <li>
+            <div class="title-head"><span>*</span>页面名称</div>
+            <input type="text" >
+        </li>
+        <li>
+            <div class="title-head">页面描述</div>
+            <input type="text" placeholder="用户通过微信分享给朋友时，会自动显示页面描述">
+        </li>
+        <!--关闭按钮-->
+        <span class="delete-btn tool-close">×</span>
+    </ul>
+    <!--更改图片广告的工具栏-->
+    <div class="banner-tool-box tool-box dis-none">
+        <div class="tool-name">
+            <h2 class="tool-title">图片广告</h2>
+        </div>
+        <!--选择模板-->
+        <div class="template-box ">
+            <h3>选择模板:</h3>
+            <ul>
+                <li class="banner-change solidBorder">
+                    <div class="show-img-box">
+                        <img src="images/banner-template/banner-tool-1.png" alt="">
+                    </div>
+                    <p class="show-info-box">轮播海报</p>
+                </li>
+                <li class="banner-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/banner-template/banner-tool-2.png" alt="">
+                    </div>
+                    <p class="show-info-box">1行1个</p>
+                </li>
+                <li class="banner-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/banner-template/banner-tool-3.png" alt="">
+                    </div>
+                    <p class="show-info-box">横向滑动(大)</p>
+                </li>
+                <li class="banner-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/banner-template/banner-tool-4.png" alt="">
+                    </div>
+                    <p class="show-info-box">横向滑动(小)</p>
+                </li>
+                <li class="banner-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/banner-template/banner-tool-5.png" alt="">
+                    </div>
+                    <p class="show-info-box">横向滑动(导航)</p>
+                </li>
+                <li class="banner-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/banner-template/banner-tool-6.png" alt="">
+                    </div>
+                    <p class="show-info-box">绘制热区</p>
+                </li>
+            </ul>
+        </div>
+        <!--更改模板样式-->
+        <ul class="change-template-box">
+            <li class="change-template">
+                <div class="fill-box">
+                    <div class="fill">填充方式:</div>
+                    <div class="fill-select">
+                        <div class="full">
+                            <i class="o oActive">
+                                <i class="so"></i>
+                            </i>
+                            <span>填充</span>
+                        </div>
+                        <div class="empty">
+                            <i class="o">
+                                <i class="so"></i>
+                            </i>
+                            <span>留白</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-list clear">
+                    <div class="pic-change">
+                        <img src="" alt="">
+                        <div class="pic-abs">更换图片</div>
+                    </div>
+                    <div class="img-data">
+                        <div class="img-name">
+                            <p class="change-name">标题:</p>
+                            <input type="text " class="write-name">
+                        </div>
+                        <div class="img-url">
+                            <p class="url-name">链接:</p>
+                            <div class="nav-bot">
+                                <h4>选择跳转到的页面 ∧ </h4>
+                                <ul class="url-list dis-none">
+                                    <li>分类1</li>
+                                    <li>分类2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="delete-btn tool-close">×</span>
+                </div>
+                <div class="update-img">
+                    <p class="add-bg">＋  添加一个背景图</p>
+                    <p class="suggest">建议尺寸 750 x 350 像素</p>
+                </div>
+                <p class="warning">最多添加10个广告</p>
+            </li>
+            <li class="change-template dis-none">
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y" be-catch = 'false' >
+                                    <span class="y-n dis-none">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>
+                <div class="img-list clear">
+                    <div class="pic-change">
+                        <img src="" alt="">
+                        <div class="pic-abs">更换图片</div>
+                    </div>
+                    <div class="img-data">
+                        <div class="img-name">
+                            <p class="change-name">标题:</p>
+                            <input type="text " class="write-name">
+                        </div>
+                        <div class="img-url">
+                            <p class="url-name">链接:</p>
+                            <div class="nav-bot">
+                                <h4>选择跳转到的页面 ∧ </h4>
+                                <ul class="url-list dis-none">
+                                    <li>分类1</li>
+                                    <li>分类2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="delete-btn">×</span>
+                </div>
+                <div class="update-img">
+                    <p class="add-bg">＋  添加一个背景图</p>
+                    <p class="suggest">建议尺寸 750 像素</p>
+                </div>
+                <p class="warning">最多添加10个广告</p>
+            </li>
+            <li class="change-template dis-none">
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y" be-catch = 'false' >
+                                    <span class="y-n dis-none">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>
+                <div class="img-list clear">
+                    <div class="pic-change">
+                        <img src="" alt="">
+                        <div class="pic-abs">更换图片</div>
+                    </div>
+                    <div class="img-data">
+                        <div class="img-name">
+                            <p class="change-name">标题:</p>
+                            <input type="text " class="write-name">
+                        </div>
+                        <div class="img-url">
+                            <p class="url-name">链接:</p>
+                            <div class="nav-bot">
+                                <h4>选择跳转到的页面 ∧ </h4>
+                                <ul class="url-list dis-none">
+                                    <li>分类1</li>
+                                    <li>分类2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="delete-btn">×</span>
+                </div>
+                <div class="update-img">
+                    <p class="add-bg">＋  添加一个背景图</p>
+                    <p class="suggest">建议尺寸 670 像素</p>
+                </div>
+                <p class="warning">最多添加10个广告</p>
+            </li>
+            <li class="change-template dis-none">
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y" be-catch = 'false' >
+                                    <span class="y-n">0
+                                        <span class="y-n-b"></span>
+                                    </span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>
+                <div class="img-list clear">
+                    <div class="pic-change">
+                        <img src="" alt="">
+                        <div class="pic-abs">更换图片</div>
+                    </div>
+                    <div class="img-data">
+                        <div class="img-name">
+                            <p class="change-name">标题:</p>
+                            <input type="text " class="write-name">
+                        </div>
+                        <div class="img-url">
+                            <p class="url-name">链接:</p>
+                            <div class="nav-bot">
+                                <h4>选择跳转到的页面 ∧ </h4>
+                                <ul class="url-list dis-none">
+                                    <li>分类1</li>
+                                    <li>分类2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="delete-btn">×</span>
+                </div>
+                <div class="update-img">
+                    <p class="add-bg">＋  添加一个背景图</p>
+                    <p class="suggest">建议尺寸 305 像素</p>
+                </div>
+                <p class="warning">最多添加10个广告</p>
+            </li>
+            <li class="change-template dis-none">
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y" be-catch = 'false' >
+                                    <span class="y-n dis-none">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>
+                <div class="img-list clear">
+                    <div class="pic-change">
+                        <img src="" alt="">
+                        <div class="pic-abs">更换图片</div>
+                    </div>
+                    <div class="img-data">
+                        <div class="img-name">
+                            <p class="change-name">标题:</p>
+                            <input type="text " class="write-name">
+                        </div>
+                        <div class="img-url">
+                            <p class="url-name">链接:</p>
+                            <div class="nav-bot">
+                                <h4>选择跳转到的页面 ∧ </h4>
+                                <ul class="url-list dis-none">
+                                    <li>分类1</li>
+                                    <li>分类2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="delete-btn">×</span>
+                </div>
+                <div class="update-img">
+                    <p class="add-bg">＋  添加一个背景图</p>
+                    <p class="suggest">建议尺寸 142 像素</p>
+                </div>
+                <p class="warning">最多添加10个广告</p>
+            </li>
+        </ul>
+        <!--更改图片广告的工具栏结束-->
+        <!--关闭按钮-->
+        <span class="delete-btn tool-close">×</span>
+    </div>
+    <!--更改文本的工具栏-->
+    <div class="text-tool-box tool-box dis-none">
+        <div class="tool-name">
+            <h2 class="tool-title">文本</h2>
+        </div>
+        <div class="text clear">
+            <h3 class="text-title">
+                <span class="pink">*</span>文本
+            </h3>
+            <textarea class="text-write" placeholder="请输入要说明的文字，最多100个字"></textarea>
+        </div>
+        <ul class="change-text">
+            <li class="select-change">
+                <h4 class="select-change-title">字体大小:</h4>
+                <nav>
+                    <div class="full fontSize18">
+                        <i class="o oActive fontSize">
+                            <i class="so"></i>
+                        </i>
+                        <span>大</span>
+                    </div>
+                    <div class="full fontSize14">
+                        <i class="o fontSize">
+                            <i class="so"></i>
+                        </i>
+                        <span>中</span>
+                    </div>
+                    <div class="full fontSize12">
+                        <i class="o fontSize">
+                            <i class="so"></i>
+                        </i>
+                        <span>小</span>
+                    </div>
+                </nav>
+            </li>
+            <li class="select-change">
+                <h4 class="select-change-title">文本颜色:</h4>
+                <nav>
+                    <input type="text" value="" class="text-color color"/>
+                    <div class="color-change text-color-reset">重置</div>
+                </nav>
+            </li>
+            <li class="select-change">
+                <h4 class="select-change-title">背景颜色:</h4>
+                <nav>
+                    <input type="text" value="" class="bg-color color"/>
+                    <div class="color-change bg-color-reset">重置</div>
+                </nav>
+            </li>
+            <li class="select-change">
+                <h4 class="select-change-title">显示位置:</h4>
+                <nav>
+                    <div class="full tal">
+                        <i class="o oActive textAlign">
+                            <i class="so"></i>
+                        </i>
+                        <span>居左</span>
+                    </div>
+                    <div class="full tac">
+                        <i class="o textAlign">
+                            <i class="so"></i>
+                        </i>
+                        <span>居中</span>
+                    </div>
+                    <div class="full tar">
+                        <i class="o textAlign">
+                            <i class="so"></i>
+                        </i>
+                        <span>居右</span>
+                    </div>
+                </nav>
+            </li>
+            <li class="select-change">
+                <h4 class="select-change-title">链接:</h4>
+                <div class="nav-bot">
+                    <h4>选择跳转到的页面 ∧ </h4>
+                    <ul class="url-list dis-none">
+                        <li>分类1</li>
+                        <li>分类2</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!--关闭按钮-->
+        <span class="delete-btn tool-close">×</span>
+    </div>
+    <!-- 更改魔方的工具栏 -->
+    <div class="magic-cube-tool-box tool-box dis-none">
+        <div class="tool-name">
+            <h2 class="tool-title">魔方</h2>
+        </div>
+        <div class="template-box ">
+            <h3>选择模板:</h3>
+            <ul>
+                <li class="magic-change solidBorder">
+                    <div class="show-img-box">
+                        <img src="images/magic-cude-template/magic-tool-1.png" alt="">
+                    </div>
+                    <p class="show-info-box">1行2个</p>
+                </li>
+                <li class="magic-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/magic-cude-template/magic-tool-2.png" alt="">
+                    </div>
+                    <p class="show-info-box">1行3个</p>
+                </li>
+                <li class="magic-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/magic-cude-template/magic-tool-3.png" alt="">
+                    </div>
+                    <p class="show-info-box">1行4个</p>
+                </li>
+                <li class="magic-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/magic-cude-template/magic-tool-4.png" alt="">
+                    </div>
+                    <p class="show-info-box">2左2右</p>
+                </li>
+                <li class="magic-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/magic-cude-template/magic-tool-5.png" alt="">
+                    </div>
+                    <p class="show-info-box">1左2右</p>
+                </li>
+                <li class="magic-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/magic-cude-template/magic-tool-6.png" alt="">
+                    </div>
+                    <p class="show-info-box">1上2下</p>
+                </li>
+                <li class="magic-change mc-border">
+                    <div class="show-img-box">
+                        <img src="images/magic-cude-template/magic-tool-7.png" alt="">
+                    </div>
+                    <p class="show-info-box">1左3右</p>
+                </li>
+            </ul>
+        </div>
+        <ul class="template-build">
+            <li class="build-type">
+                <div class="divbuild">
+                    <h4 class="tem-tem-name">布局:</h4>
+                    <div class="build-show">
+                        <div class="build-pic-show">
+                            <div class="build-pic-template solidBorder bpt-no1">宽度375像素
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no1">宽度375像素
+                                <img src="" alt="">
+                            </div>
+                        </div>    
+                        <p class="build-info">选定布局区域，在下方添加图片，建议添加比例一致的图片</p>
+                    </div>
+                </div>
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y" be-catch = 'false' >
+                                    <span class="y-n">0</span>
+                                    <span class="y-n-b"></span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>    
+                <div class="add-img-box">
+                    <div class="add-img-btn">
+                        <img src="images/add.png" alt="">
+                        <p>更换图片</p>
+                    </div>
+                    <div class="nav-bot">
+                        <h4>选择跳转到的页面 ∧ </h4>
+                        <ul class="url-list dis-none">
+                            <li>分类1</li>
+                            <li>分类2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="build-type dis-none">
+                <div class="divbuild">
+                    <h4 class="tem-tem-name">布局:</h4>
+                    <div class="build-show">
+                        <div class="build-pic-show">
+                            <div class="build-pic-template solidBorder bpt-no2">宽度250像素
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no2">宽度250像素
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no2">宽度250像素
+                                <img src="" alt="">
+                            </div>
+                        </div>    
+                        <p class="build-info">选定布局区域，在下方添加图片，建议添加比例一致的图片</p>
+                    </div>
+                </div>
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y">
+                                    <span class="y-n">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>    
+                <div class="add-img-box">
+                    <div class="add-img-btn">
+                        <img src="images/add.png" alt="">
+                        <p>更换图片</p>
+                    </div>
+                    <div class="nav-bot">
+                        <h4>选择跳转到的页面 ∧ </h4>
+                        <ul class="url-list dis-none">
+                            <li>分类1</li>
+                            <li>分类2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="build-type dis-none">
+                <div class="divbuild">
+                    <h4 class="tem-tem-name">布局:</h4>
+                    <div class="build-show">
+                        <div class="build-pic-show">
+                            <div class="build-pic-template solidBorder bpt-no3">宽度188像素
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no3">宽度188像素
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no3">宽度188像素
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no3">宽度188像素
+                                <img src="" alt="">
+                            </div>
+                        </div>    
+                        <p class="build-info">选定布局区域，在下方添加图片，建议添加比例一致的图片</p>
+                    </div>
+                </div>
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y">
+                                    <span class="y-n">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>    
+                <div class="add-img-box">
+                    <div class="add-img-btn">
+                        <img src="images/add.png" alt="">
+                        <p>更换图片</p>
+                    </div>
+                    <div class="nav-bot">
+                        <h4>选择跳转到的页面 ∧ </h4>
+                        <ul class="url-list dis-none">
+                            <li>分类1</li>
+                            <li>分类2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="build-type dis-none">
+                <div class="divbuild">
+                    <h4 class="tem-tem-name">布局:</h4>
+                    <div class="build-show">
+                        <div class="build-pic-show">
+                            <div class="build-pic-template solidBorder bpt-no4">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no4">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no4">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no4">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                        </div>    
+                        <p class="build-info">选定布局区域，在下方添加图片，建议添加比例一致的图片</p>
+                    </div>
+                </div>
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y">
+                                    <span class="y-n">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>    
+                <div class="add-img-box">
+                    <div class="add-img-btn">
+                        <img src="images/add.png" alt="">
+                        <p>更换图片</p>
+                    </div>
+                    <div class="nav-bot">
+                        <h4>选择跳转到的页面 ∧ </h4>
+                        <ul class="url-list dis-none">
+                            <li>分类1</li>
+                            <li>分类2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="build-type dis-none">
+                <div class="divbuild">
+                    <h4 class="tem-tem-name">布局:</h4>
+                    <div class="build-show">
+                        <div class="build-pic-show">
+                            <div class="build-pic-template solidBorder bpt-no5">375x750像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no5">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no5">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                        </div>    
+                        <p class="build-info">选定布局区域，在下方添加图片，建议添加比例一致的图片</p>
+                    </div>
+                </div>
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y">
+                                    <span class="y-n">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>    
+                <div class="add-img-box">
+                    <div class="add-img-btn">
+                        <img src="images/add.png" alt="">
+                        <p>更换图片</p>
+                    </div>
+                    <div class="nav-bot">
+                        <h4>选择跳转到的页面 ∧ </h4>
+                        <ul class="url-list dis-none">
+                            <li>分类1</li>
+                            <li>分类2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="build-type dis-none">
+                <div class="divbuild">
+                    <h4 class="tem-tem-name">布局:</h4>
+                    <div class="build-show">
+                        <div class="build-pic-show">
+                            <div class="build-pic-template solidBorder bpt-no6">750x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no6">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no6">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                        </div>    
+                        <p class="build-info">选定布局区域，在下方添加图片，建议添加比例一致的图片</p>
+                    </div>
+                </div>
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y">
+                                    <span class="y-n">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>    
+                <div class="add-img-box">
+                    <div class="add-img-btn">
+                        <img src="images/add.png" alt="">
+                        <p>更换图片</p>
+                    </div>
+                    <div class="nav-bot">
+                        <h4>选择跳转到的页面 ∧ </h4>
+                        <ul class="url-list dis-none">
+                            <li>分类1</li>
+                            <li>分类2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="build-type dis-none">
+                <div class="divbuild">
+                    <h4 class="tem-tem-name">布局:</h4>
+                    <div class="build-show">
+                        <div class="build-pic-show">
+                            <div class="build-pic-template solidBorder bpt-no7">375x750像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no7">375x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no7">188x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                            <div class="build-pic-template bpt-border bpt-no7">188x375像素 或同等比例
+                                <img src="" alt="">
+                            </div>
+                        </div>    
+                        <p class="build-info">选定布局区域，在下方添加图片，建议添加比例一致的图片</p>
+                    </div>
+                </div>
+                <div class="clearance">
+                    <h4 class="tem-tem-name">图片间隙:</h4>
+                    <div class="rocker-box">
+                        <div class="g-box">
+                            <div class="g">
+                                <div class="g-c"></div>
+                                <i class="y">
+                                    <span class="y-n">0</span>
+                                </i>
+                            </div>
+                        </div>
+                        <input type="text" class="num-box" value="0">
+                    </div>
+                </div>    
+                <div class="add-img-box">
+                    <div class="add-img-btn">
+                        <img src="images/add.png" alt="">
+                        <p>更换图片</p>
+                    </div>
+                    <div class="nav-bot">
+                        <h4>选择跳转到的页面 ∧ </h4>
+                        <ul class="url-list dis-none">
+                            <li>分类1</li>
+                            <li>分类2</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--更改标题的工具栏-->
+    <div class="title-tool-box tool-box dis-none">
+        <div class="tool-name">
+            <h2 class="tool-title">标题</h2>
+        </div>
+        <div class="change-text">
+            <div class="change-text-title">
+                <h4 class="text-title-t">
+                    <span class="pink">*</span>
+                    <span>标题名:</span>
+                </h4>
+                <input type="text" class="write-title">
+            </div>
+            <div class="select-change">
+                <h4 class="select-change-title">背景颜色:</h4>
+                <nav>
+                    <input type="text" value="" class="bg-color color"/>
+                    <div class="color-change bg-color-reset">重置</div>
+                </nav>
+            </div>
+            <div class="select-change">
+                <h4 class="select-change-title">显示位置:</h4>
+                <nav>
+                    <div class="full tal">
+                        <i class="o oActive tal textAlign">
+                            <i class="so"></i>
+                        </i>
+                        <span>居左显示</span>
+                    </div>
+                    <div class="full tac">
+                        <i class="o textAlign">
+                            <i class="so"></i>
+                        </i>
+                        <span>居中显示</span>
+                    </div>
+                    <div class="full tar">
+                        <i class="o textAlign">
+                            <i class="so"></i>
+                        </i>
+                        <span>居右显示</span>
+                    </div>
+                </nav>
+            </div>
+            <div class="select-change">
+                <h4 class="select-change-title">标题模板:</h4>
+                <nav>
+                    <div class="full normal">
+                        <i class="o oActive kind">
+                            <i class="so"></i>
+                        </i>
+                        <span>传统样式</span>
+                    </div>
+                    <div class="full wechat">
+                        <i class="o kind">
+                            <i class="so"></i>
+                        </i>
+                        <span>模仿微信图文页样式</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <ul class="tem-list">
+            <li class="kind-type tradition">
+                <div class="change-text-title">
+                    <h4 class="text-title-t">
+                        <span>副标题:</span>
+                    </h4>
+                    <input type="text" class="write-title-f">
+                </div>
+                <div class="add-wbdh">＋ 添加一个文本导航</div>
+                <div class="wbdh dis-none">
+                    <i class="delete-btn dis-none">×</i>
+                    <div class="change-text-title">
+                        <h4 class="text-title-t dh">
+                            <span>导航名称:</span>
+                        </h4>
+                        <input type="text" class="write-title-n">
+                    </div>
+                    <div class="img-url">
+                        <h4 class="text-title-t">
+                                <span>链接到:</span>
+                            </h4>
+                        <div class="nav-bot">
+                            <h4>选择跳转到的页面 ∧ </h4>
+                            <ul class="url-list dis-none">
+                                <li>分类1</li>
+                                <li>分类2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>  
+            <li class="kind-type weChat dis-none">
+                <div class="change-text-title">
+                    <h4 class="text-title-t">
+                        <span>日期:</span>
+                    </h4>
+                    <div id="demo">
+                        <input  type="text" class="write-title-d" id="dt" placeholder="请选择日期">
+                        <div id="dd"></div>
+                    </div>
+                </div>
+                <div class="change-text-title">
+                    <h4 class="text-title-t">
+                        <span>作者:</span>
+                    </h4>
+                    <input type="text" class="write-title-proud">
+                </div>
+                <div class="change-text-title">
+                    <h4 class="text-title-t">
+                        <span>链接标题:</span>
+                    </h4>
+                    <input type="text" class="write-title-url">
+                </div>
+                <div class="change-text-title urlplace">
+                    <h4 class="text-title-t">
+                        <span>链接地址:</span>
+                    </h4>
+                    <nav>
+                        <div class="full">
+                            <i class="o oActive">
+                                <i class="so"></i>
+                            </i>
+                            <span>引导关注</span>
+                            <a href="javascript:;">设置快速关注链接</a>
+                        </div>
+                        <div class="full">
+                            <i class="o">
+                                <i class="so"></i>
+                            </i>
+                            <span>其他链接</span>
+                            <div class="nav-bot">
+                                <h4>选择跳转到的页面 ∧ </h4>
+                                <ul class="url-list dis-none">
+                                    <li>分类1</li>
+                                    <li>分类2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </li>   
+        </ul>
+    </div>
+    <!--添加按钮组的工具栏-->
+    <div class="btn-tool-box tool-box dis-none">
+        <dl class="base btn-group">
+            <dt class="base btn-title">基础组件</dt>
+            <dd>
+                <ul class="base btn-con">
+                    <li class="base btn-list" data-type='富文本'>富文本</li>
+                    <li class="base btn-list" data-type='商品'>商品</li>
+                    <li class="base btn-list" data-type='商品分组'>商品分组</li>
+                    <li class="base btn-list" data-type='banner-tool-box'>图片广告</li>
+                    <li class="base btn-list" data-type='魔方'>魔方</li>
+                    <li class="base btn-list" data-type='图文导航'>图文导航</li>
+                    <li class="base btn-list" data-type='text-tool-box'>文本</li>
+                    <li class="base btn-list" data-type='关联链接'>关联链接</li>
+                    <li class="base btn-list" data-type='标题'>标题</li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="base btn-group">
+            <dt class="base btn-title">营销组件</dt>
+            <dd>
+                <ul class="base btn-con">
+                    <li class="base btn-list">优惠券</li>
+                    <li class="base btn-list">拼团</li>
+                    <li class="base btn-list">周期购</li>
+                    <li class="base btn-list">买单</li>
+                    <li class="base btn-list">限时折扣</li>
+                    <li class="base btn-list">秒杀</li>
+                    <li class="base btn-list disabled">知识专栏</li>
+                    <li class="base btn-list disabled">知识内容</li>
+                </ul>
+                <!--class  no-disabled 代表这个功能还没上线-->
+            </dd>
+        </dl>
+        <dl class="base btn-group">
+            <dt class="base btn-title">其他</dt>
+            <dd>
+                <ul class="base btn-con">
+                    <li class="base btn-list">店铺信息</li>
+                    <li class="base btn-list">进入店铺</li>
+                    <li class="base btn-list">商品搜索</li>
+                    <li class="base btn-list">公告</li>
+                    <li class="base btn-list">语音</li>
+                    <li class="base btn-list">线下门店</li>
+                    <li class="base btn-list">在线客服</li>
+                    <li class="base btn-list">辅助线</li>
+                    <li class="base btn-list">辅助空白</li>
+                    <li class="base btn-list">自定义模块</li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</section>
+<!-- swiper 轮播图 -->
+<script src="js/swiper-4.1.6.min.js"></script>
+<!--  -->
+<script src="js/stringTemplate.js"></script>
+<!-- 工具栏重置 -->
+<script src="js/resetToolTemplate.js"></script>
+<!-- 文本操作 -->
+<script src="js/textOperation.js"></script>
+<!-- 图片广告操作 -->
+<script src="js/bannerOperation.js"></script>
+<!-- 魔方操作 -->
+<script src="js/magicCudeOperation.js"></script>
+<!-- 标题操作 -->
+<script src="js/titleOperation.js"></script>
+<!-- 日历 -->
+<script src="js/calendar.js"></script>
+<!--  -->
+<script src="js/decoration.js"></script>
+</body>
+</html>

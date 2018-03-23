@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script src="../../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+<script>
+	$(function () {
+       $('#container').highcharts({
+            chart: {
+                type: 'spline',
+                inverted: true
+            },
+            title: {
+                text: '海拔温度'
+            },
+            subtitle: {
+                text: '信息来源：官方数据'
+            },
+            xAxis: {
+                reversed: false,
+                title: {
+                    enabled: true,
+                    text: '海拔'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value +'km';
+                    }
+                },
+                maxPadding: 0.05,
+                showLastLabel: true
+            },
+            yAxis: {
+                title: {
+                    text: '温度'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value + '°';
+                    }
+                },
+                lineWidth: 2
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br/>',
+                pointFormat: '{point.x} km: {point.y}°C'
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        enable: false
+                    }
+                }
+            },
+            series: [{
+                name: '温度',
+                data: [[0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
+                    [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5]]
+            }]
+        });
+    });
+    
+</script>
+</head>
+<body>
+
+		<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+ 
+</body>
+</html>

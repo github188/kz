@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script src="../../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+<script src="../../../libs/thirdparty/highcharts/js/highcharts-more.js"></script>
+<script>
+	$(function () {
+        $('#container').highcharts({
+	
+	    chart: {
+	        type: 'columnrange',
+	        inverted: true
+	    },
+	    
+	    title: {
+	        text: '月温度值'
+	    },
+	    
+	
+	    xAxis: {
+	        categories: [
+                    '1月',
+                    '2月',
+                    '3月',
+                    '4月',
+                    '5月',
+                    '6月',
+                    '7月',
+                    '8月',
+                    '9月',
+                    '10月',
+                    '11月',
+                    '12月'
+                ]
+	    },
+	    
+	    yAxis: {
+	        title: {
+	            text: '温度 ( °C )'
+	        }
+	    },
+	
+	    tooltip: {
+	        valueSuffix: '°C'
+	    },
+	    
+	    plotOptions: {
+	        columnrange: {
+	        	dataLabels: {
+	        		enabled: true,
+	        		formatter: function () {
+	        			return this.y + '°C';
+	        		}
+	        	}
+	        }
+	    },
+	    
+	    legend: {
+	        enabled: false
+	    },
+	
+	    series: [{
+	        name: '温度',
+	        data: [
+				[-9.7, 9.4],
+				[-8.7, 6.5],
+				[-3.5, 9.4],
+				[-1.4, 19.9],
+				[0.0, 22.6],
+				[2.9, 29.5],
+				[9.2, 30.7],
+				[7.3, 26.5],
+				[4.4, 18.0],
+				[-3.1, 11.4],
+				[-5.2, 10.4],
+				[-13.5, 9.8]
+			]
+	    }]
+	
+	});
+    
+});
+</script>
+</head>
+<body>
+
+		<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+ 
+</body>
+</html>

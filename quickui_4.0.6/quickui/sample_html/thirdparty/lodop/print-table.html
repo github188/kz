@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+
+<!--数字分页start-->
+<script type="text/javascript" src="../../../libs/js/nav/pageNumber.js"></script>
+<!--数字分页end-->
+
+<!--lodop打印控件start-->
+<script src="../../../libs/thirdparty/lodop/LodopFuncs.js" type="text/javascript"></script>
+<object  id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width="0" height="0" style="line-height:0px;"> 
+       <embed id="LODOP_EM" type="application/x-print-lodop" width="0" height="0" style="line-height:0px;"></embed>
+</object>
+<!--lodop打印控件end-->
+
+<!--打印的表格样式start-->
+<style id="printStyle">
+.tablePrint{
+ 	border-collapse: collapse;
+	border: 1px solid #000000;
+	width: 100%;
+	background-color: White;
+}
+.tablePrint th{
+ 	border-left: 1.0pt solid windowtext;
+	border-right: 1.0pt solid windowtext;
+	border-bottom: 1.0pt solid windowtext;
+	word-wrap: normal;
+	word-break: keep-all;
+	overflow:hidden;
+	border-color: #000000; 
+	padding: 0 2px 0 4px;
+	background-color:#cccccc;
+	color:#000000;
+	font-weight: normal;
+	 
+}
+.tablePrint td{
+ 	border-left: 1.0pt solid windowtext;
+	border-right: 1.0pt solid windowtext;
+	border-bottom: 1.0pt solid windowtext;
+	border-color: #000000;
+	height:30px; 
+	padding: 1px 2px 1px 4px;
+}
+.tablePrint .printHide{
+	display:none;
+}
+</style>
+<!--打印的表格样式end-->
+</head>
+<body>
+<div class="page_content">
+<div class="groupTitle"><span>示例说明</span></div>
+需要连接打印机才能正常测试。如果没有测试条件，可以<a style="color:red" href="../../../libs/images/demo/lodop1.jpg" target="_blank">点击这里</a>查看实际效果截图，或者<a href="https://www.baidu.com/s?wd=pdfcreator&rsv_spt=1&rsv_iqid=0x874b7ecc00012724&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&rsv_t=585da%2FEy%2FWzcOKDuLbnt9I0pN6EY4vmMxbwebyajRZH%2F4WjKPJKIRYqtg3bHOetD2Fy6&oq=iframe%2520scrolling%2520x&rsv_pq=e0c1fbc00000605d&inputT=505&rsv_sug3=24&rsv_sug1=23&rsv_sug7=100&bs=iframe%20scrolling%20x" target="_blank" style="color:red">点击下载</a>并安装虚拟打印机进行测试。
+<br/>如果安装了虚拟打印机，还有一个额外的功能，能够把要打印的数据直接输出成PDF文件（在打印预览窗口点击打印按钮）。
+	<div class="height_15"></div>
+
+	<a href="javascript:;" onclick="printHandler()"><span class="icon_print">打印本页数据</span></a>
+<div class="height_15"></div>
+<table id="myTable" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: medium none">
+	<tr style="page-break-inside: avoid">
+		<td width="65" colspan="3" valign="top" style="width: 48.75pt; border: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">姓</span> <span style="font-family: 宋体">名</span></td>
+		<td width="96" colspan="2" valign="top" style="width: 72.15pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="49" valign="top" style="width: 36.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">性别</span></td>
+		<td width="45" colspan="3" valign="top" style="width: 33.7pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="74" colspan="3" valign="top" style="width: 55.55pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">出生年月</span></td>
+		<td width="63" colspan="4" valign="top" style="width: 47.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="49" colspan="4" valign="top" style="width: 36.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">民族</span></td>
+		<td width="42" colspan="2" valign="top" style="width: 31.5pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="105" rowspan="5" valign="top" style="width: 78.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: 1.0pt solid windowtext; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></p>
+		<p class="MsoNormal" style="text-indent: 21.0pt; line-height: 25.0pt">
+		<span lang="EN-US">&nbsp;</span><span style="font-family: 宋体">照</span></p>
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></p>
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;
+		</span><span style="font-family: 宋体">片</span></td>
+	</tr>
+	<tr style="page-break-inside: avoid">
+		<td width="65" colspan="3" valign="top" style="width: 48.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">籍</span> <span style="font-family: 宋体">贯</span></td>
+		<td width="96" colspan="2" valign="top" style="width: 72.15pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="77" colspan="2" valign="top" style="width: 57.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">政治面貌</span></td>
+		<td width="77" colspan="4" valign="top" style="width: 57.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="77" colspan="5" valign="top" style="width: 57.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">健康状况</span></td>
+		<td width="91" colspan="6" valign="top" style="width: 68.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr style="page-break-inside: avoid">
+		<td width="65" colspan="3" valign="top" style="width: 48.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 13.0pt">
+		<span style="font-family: 宋体">户口</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 13.0pt">
+		<span style="font-family: 宋体">所在地</span></td>
+		<td width="96" colspan="2" valign="top" style="width: 72.15pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="91" colspan="3" valign="top" style="width: 68.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt">
+		<span style="font-family: 宋体">身份证号码</span></td>
+		<td width="133" colspan="7" valign="top" style="width: 99.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="49" colspan="4" valign="top" style="width: 36.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 25.0pt">
+		<span style="font-family: 宋体">身高</span></td>
+		<td width="49" colspan="3" valign="top" style="width: 36.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 25.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr style="page-break-inside: avoid">
+		<td width="65" colspan="3" valign="top" style="width: 48.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 22.0pt">
+		<span style="font-family: 宋体">学</span> <span style="font-family: 宋体">历</span></td>
+		<td width="96" colspan="2" valign="top" style="width: 72.15pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 22.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="91" colspan="3" rowspan="2" valign="top" style="width: 68.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 22.0pt">
+		<span style="font-family: 宋体">何时何院校</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 22.0pt">
+		<span style="font-family: 宋体">何专业毕业</span></td>
+		<td width="231" colspan="14" rowspan="2" valign="top" style="width: 173.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 22.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr style="page-break-inside: avoid">
+		<td width="65" colspan="3" valign="top" style="width: 48.75pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">学</span> <span style="font-family: 宋体">位</span></td>
+		<td width="96" colspan="2" valign="top" style="width: 72.15pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 30.1pt">
+		<td width="65" colspan="3" valign="top" style="width: 48.75pt; height: 30.1pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">专业技</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">术职称</span></td>
+		<td width="96" colspan="2" valign="top" style="width: 72.15pt; height: 30.1pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="91" colspan="3" valign="top" style="width: 68.25pt; height: 30.1pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">熟悉何种外语及程度</span></td>
+		<td width="105" colspan="6" valign="top" style="width: 78.75pt; height: 30.1pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="70" colspan="4" valign="top" style="width: 52.5pt; height: 30.1pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体; letter-spacing: -.2pt">计算机</span><span style="letter-spacing:-.2pt">
+		</span><span style="font-family: 宋体; letter-spacing: -.2pt">应用能力</span></td>
+		<td width="161" colspan="5" valign="top" style="width: 120.75pt; height: 30.1pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr style="page-break-inside: avoid; height: 21.35pt">
+		<td width="105" colspan="4" valign="top" style="width: 78.9pt; height: 21.35pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt">
+		<span style="font-family: 宋体">参加工作时间</span></td>
+		<td width="147" colspan="4" valign="top" style="width: 110.25pt; height: 21.35pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt">
+		<span lang="EN-US" style="letter-spacing:-.4pt">&nbsp;</span></td>
+		<td width="105" colspan="6" valign="top" style="width: 78.75pt; height: 21.35pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt">
+		<span style="font-family: 宋体; letter-spacing: -.4pt">擅长何种工作</span></td>
+		<td width="231" colspan="9" valign="top" style="width: 173.25pt; height: 21.35pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr>
+		<td width="105" colspan="4" valign="top" style="width: 78.9pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">应聘何职位</span></td>
+		<td width="252" colspan="10" valign="top" style="width: 189.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="112" colspan="7" valign="top" style="width: 84.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">待遇要求</span></td>
+		<td width="119" colspan="2" valign="top" style="width: 89.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr>
+		<td width="63" colspan="2" valign="top" style="width: 47.4pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">详细通信地址</span></td>
+		<td width="224" colspan="8" valign="top" style="width: 168.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="49" colspan="3" valign="top" style="width: 36.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">邮政编码</span></td>
+		<td width="84" colspan="4" valign="top" style="width: 63.0pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+		<td width="49" colspan="4" valign="top" style="width: 36.75pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 20.0pt">
+		<span style="font-family: 宋体">联系电话</span></td>
+		<td width="119" colspan="2" valign="top" style="width: 89.25pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 20.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 211.4pt">
+		<td width="49" valign="top" style="width: 36.9pt; height: 211.4pt; border-left: 1.0pt solid windowtext; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span lang="EN-US">&nbsp;</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">个</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">人</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">主</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">要</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">简</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">历</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">及</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">主</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">要</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">业</span></p>
+		<p class="MsoNormal" align="center" style="text-align: center; line-height: 17.0pt">
+		<span style="font-family: 宋体">绩</span></td>
+		<td width="539" colspan="22" valign="top" style="width: 404.25pt; height: 211.4pt; border-left: medium none; border-right: 1.0pt solid windowtext; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0cm; padding-bottom: 0cm">
+		<p class="MsoNormal" style="line-height: 17.0pt"><span lang="EN-US">&nbsp;</span></td>
+	</tr>
+</table>
+</div>
+
+<script>
+function printHandler(){
+	 var LODOP=getLodop(document.getElementById('LODOP_OB'),document.getElementById('LODOP_EM')); 
+    var strBodyStyle="<style>"+document.getElementById("printStyle").innerHTML+"</style>";
+    var tableHtml;
+    var tableObj=$('<table class="tablePrint"></table>')
+    var tableCon=$('<div></div>')
+    tableCon.append(tableObj);
+    tableObj.append($("#myTable").html());
+    tableHtml=tableCon.html();
+	var strBodyHtml=strBodyStyle+"<body>"+tableHtml+"</body>";
+    LODOP.PRINT_INIT("打印本页数据");	
+	LODOP.ADD_PRINT_TABLE(15,0,"99%","96%",strBodyHtml);
+	LODOP.PREVIEW();
+}
+
+</script>
+</body>
+</html>

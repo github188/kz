@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<!--框架必需start-->
+<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../libs/js/framework.js"></script>
+<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+
+<!--ueEditor编辑器start-->
+<script>
+ window.UEDITOR_HOME_URL = "../../libs/thirdparty/ueditor/";
+</script>
+<script type="text/javascript" charset="utf-8" src="../../libs/thirdparty/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../libs/thirdparty/ueditor/ueditor.all.js"></script>
+
+<!--ueEditor编辑器start-->
+</head>
+<body>
+
+<div class="page_content">
+
+
+			<div class="groupTitle"><span>示例说明</span></div>
+      	
+      	UEditor是百度web前端团队推出的一款开源富文本编辑器，它有着漂亮的外观，良好的用户体验和强大的功能。<br/>
+      	框架对editor_all.js简单做了修改，将z-index由999改为400，以免遮住下拉框选项（下拉框的z-index是500）,另外默认宽度由1000px改为了100%<br/>
+      	详细用法和完整示例见官方示例。
+
+      <div class="height_15"></div>
+      
+
+
+		
+      	
+      <table class="tableStyle">
+      	<tr>
+      		<td width="100">下拉框</td>
+      		<td>
+      			<select><option>请选择</option><option>选项1</option><option>选项2</option><option>选项3</option><option>选项4</option><option>选项5</option></select>
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>编辑器</td>
+      		<td>
+			     <!--style给定宽度可以影响编辑器的最终宽度-->
+			    <script type="text/plain" id="myEditor">
+			        <p>这里我可以写一些输入提示</p>
+			    </script>
+      		</td>
+      	</tr>
+      </table>
+      
+     
+    <script type="text/javascript">
+        // 自定义的编辑器配置项,此处定义的配置项将覆盖editor_config.js中的同名配置
+        var editorOption = {
+        };
+        var editor_a = new baidu.editor.ui.Editor(editorOption);
+        editor_a.render( 'myEditor' );
+    </script>
+      
+      
+
+     
+      
+</div>
+
+     
+</body>
+</html>

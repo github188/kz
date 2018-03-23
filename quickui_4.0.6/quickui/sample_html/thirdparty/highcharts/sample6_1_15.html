@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script src="../../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+<script>
+	$(function () {
+         $('#container').highcharts({
+    
+            chart: {
+                type: 'column'
+            },
+    
+            title: {
+                text: '营养含量'
+            },
+    
+            xAxis: {
+                categories: ['苹果', '橙子', '梨', '葡萄', '香蕉']
+            },
+    
+            yAxis: {
+                allowDecimals: false,
+                min: 0,
+                title: {
+                    text: '水果数量'
+                }
+            },
+    
+            tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.x +'</b><br/>'+
+                        this.series.name +': '+ this.y +'<br/>'+
+                        '总量: '+ this.point.stackTotal;
+                }
+            },
+    
+            plotOptions: {
+                column: {
+                    stacking: 'normal'
+                }
+            },
+    
+            series: [{
+                name: '维生素A',
+                data: [5, 3, 4, 7, 2],
+                stack: 'male'
+            }, {
+                name: '维生素B',
+                data: [3, 4, 4, 2, 5],
+                stack: 'male'
+            }, {
+                name: '维生素C',
+                data: [2, 5, 6, 2, 1],
+                stack: 'female'
+            }, {
+                name: '维生素D',
+                data: [3, 0, 4, 4, 3],
+                stack: 'female'
+            }]
+        });
+    });
+    
+    
+</script>
+</head>
+<body>
+
+		<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+ 
+</body>
+</html>

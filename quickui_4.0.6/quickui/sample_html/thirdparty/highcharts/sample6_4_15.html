@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../../libs/js/language/cn.js"></script>
+<script type="text/javascript" src="../../../libs/js/framework.js"></script>
+<link href="../../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script src="../../../libs/thirdparty/highcharts/js/highcharts.js"></script>
+<script src="../../../libs/thirdparty/highcharts/js/highcharts-more.js"></script>
+<script src="../../../libs/thirdparty/highcharts/js/modules/funnel.js"></script>
+<script>
+	$(function () {
+        $('#container').highcharts({
+        chart: {
+            type: 'funnel',
+            marginRight: 100
+        },
+        title: {
+            text: '漏斗图',
+            x: -50
+        },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b> ({point.y:,.0f})',
+                    color: 'black',
+                    softConnector: true
+                },
+                neckWidth: '30%',
+                neckHeight: '25%'
+                
+                //-- Other available options
+                // height: pixels or percent
+                // width: pixels or percent
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: '独立用户',
+            data: [
+                ['网站访问',   15654],
+                ['下载',       4064],
+                ['获取价格表', 1987],
+                ['咨询',    976],
+                ['收藏',    846]
+            ]
+        }]
+    });
+});
+</script>
+</head>
+<body>
+
+		<div id="container" style="width: 650px; height: 400px; margin: 0 auto"></div>
+
+</body>
+</html>
